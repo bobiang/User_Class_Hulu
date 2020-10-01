@@ -1,0 +1,6 @@
+FROM mysql:latest
+RUN mkdir /apps
+WORKDIR /apps
+COPY . .
+RUN javac DAO.java
+CMD ["java", "DAO"]
